@@ -12,7 +12,8 @@ pipeline {
 
     stage('Get user') { 
       steps {
-        sh 'bash -lc "whoami && sudo ls /"'
+        sh 'whoami'
+        sh 'bash -lc "sudo -n true && echo \"sudo without password works\" || echo \"sudo still requires password\""'
       }
     }
   }
