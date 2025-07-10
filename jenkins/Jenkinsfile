@@ -12,7 +12,7 @@ pipeline {
 
     stage('Get user') { 
       steps {
-        sh 'whoami && sudo -n ls /'
+        sh 'bash -lc "whoami && sudo ls /"'
       }
     }
   }
