@@ -8,7 +8,8 @@ pipeline {
         // git url: 'https://github.com/Dsusilo18/flask-redis-devops.git'
         echo "Repo cloned automatically"
       }
-      
+    
+    stage('Get user') { 
       steps {
         sh 'whoami'
       }
