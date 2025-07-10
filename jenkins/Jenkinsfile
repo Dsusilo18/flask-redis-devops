@@ -44,7 +44,7 @@ pipeline {
 
     stage('Deploy with Ansible') {
       steps {
-        sh 'ansible-playbook -i localhost, -c local ansible/playbook.yml --extra-vars "ansible_become_pass=''"'
+        sh 'ansible-playbook -i localhost, -c local ansible/playbook.yml --extra-vars "ansible_become_pass=\'\'"'
       }
     }
   }
