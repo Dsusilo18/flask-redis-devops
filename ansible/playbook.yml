@@ -1,4 +1,5 @@
 - hosts: localhost
+  connection: local
   become: true
   tasks:
     - name: Install Docker
@@ -14,4 +15,4 @@
     - name: Start App with Docker Compose
       shell: docker-compose up -d
       args:
-        chdir: "{{ playbook_dir }}"
+        chdir: "{{ playbook_dir }}/../app"
