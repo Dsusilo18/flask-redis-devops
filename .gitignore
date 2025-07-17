@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environments
+venv/
+.env
+.venv/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Ansible
+*.retry
+ansible/hosts
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.terraform.*
+terraform.tfvars
+terraform.tfvars.json
+crash.log
+override.tf
+override.tf.json
+
+# Jenkins
+secrets/
+*.pem
+jenkins/secrets/
+*.key
+
+# AWS CLI credentials
+.aws/
+
+# Log files
+*.log
+logs/
+
+# OS swap files
+*.swp

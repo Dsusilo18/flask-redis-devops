@@ -1,13 +1,16 @@
 from flask import Flask
 import redis
+import os
 
 app = Flask(__name__)
-r = redis.Redis(host='redis', port=6379)
+
+redis_host = os.getenv("REDIS_HOST", "localhost")
+r = redis.Redis(host=redis_host, port=6379)
 
 @app.route('/')
 def hello():
-	count = r.incr('hits')
-	return f'Hello! This page has been viewed {count} times.'
+        count = r.incr('hits')
+        return f'Hello! This page has been viewed {count} times.'
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=5000)
+        app.run(host='0.0.0.0', port=5000)
