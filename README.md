@@ -80,7 +80,7 @@ sudo mv flask-redis-devops/apache/flaskapp.conf /etc/apache2/sites-available/fla
 sudo a2ensite flaskapp
 sudo systemctl restart apache2
 ```
-Visit: http://<your-ip>
+Visit: http://personal-ip
 
 ### ⚙️ Jenkins Setup
 
