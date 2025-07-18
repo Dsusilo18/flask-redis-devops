@@ -51,7 +51,7 @@ cd flask-redis-devops
 cd app
 docker-compose up --build
 ```
-Visit: http//localhost:5000
+Visit: http://localhost:5000
 
 ## 🚀 Hosting Flask App with Apache2 + mod_wsgi
 
